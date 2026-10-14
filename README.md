@@ -72,6 +72,8 @@ Lifecycle management commands:
 
 -   /opsx:new --- Start a new change
 -   /opsx:ff --- Fast‑forward creation of artifacts
+-   /opsx:propose --- Create a change and all its artifacts in one step (delegates to /opsx:ff)
+-   /opsx:update --- Revise existing planning artifacts and keep them coherent
 -   /opsx:apply --- Implement change artifacts
 -   /opsx:verify --- Verify implementation vs artifacts
 -   /opsx:sync --- Sync delta specs into main specs
@@ -82,6 +84,10 @@ Lifecycle management commands:
 -   /opsx:onboard --- Guided onboarding through workflow
 
 These commands manage the change lifecycle only.
+
+They are generated from OpenSpec CLI 1.14.1 and then customized. Do not run
+`openspec init` or `openspec update` in this repository: both overwrite the
+customizations. See the "Upgrading OpenSpec" section in `BOOTSTRAP.md`.
 
 ------------------------------------------------------------------------
 
@@ -106,12 +112,6 @@ These commands manage standards, documentation, planning, and execution.
 
 -   /ai-specs:handoff-us\
     Prepare a validated user story for implementation (technical-ready state).
-
--   /ai-specs:plan-backend-ticket\
-    Generate an implementation plan for backend tickets.
-
--   /ai-specs:plan-frontend-ticket\
-    Generate an implementation plan for frontend tickets.
 
 -   /ai-specs:commit\  
     Structured commit (and optional PR) workflow with governance checks.
